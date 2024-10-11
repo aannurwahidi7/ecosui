@@ -9089,6 +9089,13 @@ textarea.form-control {
     .ftco-section {
       padding: 6em 0; } }
 
+.ftco-section-chart {
+  padding: 2em 0;
+  position: relative; }
+  @media (max-width: 767.98px) {
+    .ftco-section {
+      padding: 1em 0; } }
+
 .ftco-no-pt {
   padding-top: 0 !important; }
 
@@ -9716,6 +9723,7 @@ textarea.form-control {
 
 .lp {
   margin-top: 100px;
+  overflow: hidden;
 }
 
 .title img {
@@ -9793,10 +9801,9 @@ textarea.form-control {
   }
 
   .tree img {
-    bottom: -80%;
-  }
-  .tree1 img {
-    bottom: -80%;
+    height: 30%;
+    width: 30%;
+    translate: 0% 60%;
   }
 }
 
@@ -10047,22 +10054,28 @@ textarea.form-control {
 
 .waves {
   height: 250px;
+  position: relative;
 }
-.wave, .wave-2{
+.wave-2 {
   height: 250px;
   position: relative;
   width: 100%;
-  /* overflow: hidden; */
 }
 
 .wave img {
+  z-index: 2;
   position: absolute;
   width: 100%;
-  /* bottom: -50%; */
-  transform: translate(0, 50%);
-  /* translate: 0 50%; */
+  translate: 0 -67%;
   overflow: visible;
-  z-index: 2;
+}
+
+.wave-1 {
+  padding: 0;
+  translate: 0 -125%;
+  /* height: 250px; */
+  position: absolute;
+  width: 100%;
 }
 
 .wave-2 img {
@@ -10070,8 +10083,6 @@ textarea.form-control {
   position: absolute;
   width: 100%;
   translate: 0% -67%;
-  /* top: -50%; */
-  /* bottom: 10%; */
   overflow: visible;
 }
 
@@ -10158,4 +10169,271 @@ textarea.form-control {
     /* top: 0;
     left: 0; */
   }
+}
+
+/* Chart */
+.center-vertical {
+  /* position: absolute; */
+  margin: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.donut-chart-block {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;  
+}
+
+.donut-chart {
+  position: relative;
+	width: 400px;
+  height: 400px;
+	margin: auto;
+	border-radius: 100%;
+  z-index: 0;
+ }
+.center {
+  background: var(--primary);
+  position: absolute;
+  text-align: center;
+font-size: 28px;
+  top:0;left:0;bottom:0;right:0;
+  width: 240px;
+  height: 240px;
+  margin: auto;
+  border-radius: 50%;
+  line-height: 35px;
+  padding: 15% 0 0;
+  z-index: inherit;
+}
+.center-sui {
+  background-image: url("../images/sui-chart.png");
+
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  /* text-align: center; */
+/* font-size: 28px; */
+  top:0;left:0;bottom:0;right:0;
+  width: 208px;
+  height: 208px;
+  margin: auto;
+  border-radius: 50%;
+  line-height: 35px;
+  padding: 15% 0 0;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+}
+	
+	
+.portion-block {
+    border-radius: 50%;
+    clip: rect(0px, 400px, 400px, 200px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+.circle {
+    border-radius: 50%;
+    clip: rect(0px, 200px, 400px, 0px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-family: monospace;
+    font-size: 1.5rem;
+  }
+	
+#market {
+    transform: rotate(-10deg);
+  }
+
+	#market .circle {
+		background-color: #63BAF2;
+    transform: rotate(50deg)
+		/*transform: rotate(76deg);*/
+		/* animation: first 1s 1 forwards; */
+	  }
+	
+	
+#rewards {
+    transform: rotate(30deg);
+  }
+#rewards .circle {
+    background-color: #8CCBFF;
+    transform: rotate(110deg);
+    /* animation: second 1s 1 forwards 1s; */
+  }
+#team {
+    transform: rotate(110deg);
+}
+	#team .circle {
+		background-color: #0B7BD6;
+    transform: rotate(130deg);
+		/* animation: third 1s 1 forwards 2s; */
+	}
+
+#dev {
+    transform: rotate(130deg);
+}
+	#dev .circle {
+		background-color: #1385E3;
+    transform: rotate(150deg);
+		/* animation: fourth 1s 1 forwards 3s; */
+	}
+#liquid {
+    transform: rotate(150deg);
+}
+	#liquid .circle {
+		background-color: #B8E5FA;
+    transform: rotate(150deg);
+		/* animation: fifth 1s 1 forwards 4s; */
+	}
+#liquid2 {
+    transform: rotate(250deg);
+}
+	#liquid2 .circle {
+		background-color: #B8E5FA;
+    transform: rotate(110deg);
+		/* animation: sixth 1s 1 forwards 5s; */
+	}
+
+.info-chart {
+  width: 50%;
+  position: relative;
+  margin: auto;
+}
+.info-chart-market {
+  transform: translate(60%, 520%); 
+}
+
+.info-chart-market img {
+  width: 300px;
+  height: 84px;
+}
+
+.info-chart-rewards {
+  transform: translate(80%, 520%);
+}
+
+.info-chart-rewards img {
+  width: 252px;
+  height: 96px;
+}
+.info-chart-team {
+  transform: translate(78%, 780%);
+}
+
+.info-chart-team img {
+  width: 180px;
+  height: 78px;
+}
+.info-chart-dev {
+  transform: translate(-15%, 490%);
+}
+
+.info-chart-dev img {
+  width: 480px;
+  height: 120px;
+}
+.info-chart-liquid {
+  transform: translate(-25%, 120%);
+}
+
+.info-chart-liquid img {
+  width: 220px;
+  height: 120px;
+}
+
+@media (max-width: 1199px) {
+  .info-chart-team {
+    transform: translate(85%, 780%); }
+  .info-chart-dev {
+    transform: translate(-25%, 490%); }
+  .info-chart-liquid {
+    transform: translate(-40%, 120%);
+  }
+}
+@media (max-width: 991px) {
+  .info-chart-rewards {
+    transform: translate(95%, 520%);
+  }
+  .info-chart-team {
+    transform: translate(95%, 780%); }
+  .info-chart-dev {
+    transform: translate(-55%, 490%); }
+  .info-chart-liquid {
+    transform: translate(-70%, 120%);
+  }
+}
+
+@media (max-width: 767px) {
+  .info-chart-rewards {
+    transform: translate(125%, 520%);
+  }
+  .info-chart-team {
+    transform: translate(120%, 780%); }
+  .info-chart-dev {
+    transform: translate(-85%, 490%); }
+  .info-chart-liquid {
+    transform: translate(-100%, 120%);
+  }
+}
+@media (max-width: 575px) {
+  .donut-chart {
+    width: 200px;
+    height: 200px;
+  }
+  .center {
+    width: 120px;
+    height: 120px;
+  }
+  .center-sui {
+    width: 104px;
+    height: 104px;
+  }
+  .portion-block {
+    clip: rect(0px, 200px, 200px, 100px);
+  }
+  .circle {
+    clip: rect(0px, 100px, 200px, 0px);
+  }
+
+  .info-chart-market img {
+    width: 180px;
+    height: 50px;
+  }
+  .info-chart-rewards img {
+    width: 156px;
+    height: 60px;
+  }
+  .info-chart-team img {
+    width: 108px;
+    height: 48px;
+  }
+  .info-chart-dev img {
+    width: 288px;
+    height: 72px;
+  }
+  .info-chart-liquid img {
+    width: 132px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-links a svg {
+    width: 50px;
+    height: 50px; 
+  }
+}
+
+.social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 4px;
+  width: 75px;
+  height: 75px;
+  transition: 0.3s;
 }
