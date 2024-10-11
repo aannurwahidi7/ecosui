@@ -9235,7 +9235,17 @@ textarea.form-control {
       font-weight: 400; }
     @media (max-width: 767.98px) {
       .heading-section h2 {
-        font-size: 38px; } }
+        font-size: 38px; }
+      .heading-section h1.big {
+        font-size: 25px;
+      }
+      .heading-section h1.big span {
+        margin-left: 10px;
+      }
+      .heading-section h1.big span img {
+        height: 50px;
+      }
+     }
   .heading-section.heading-section-white .subheading {
     color: rgba(255, 255, 255, 0.9) !important; }
   .heading-section.heading-section-white h2 {
@@ -9819,10 +9829,11 @@ textarea.form-control {
 }
 
 .bubbles{
-  position:absolute;
-  width:100%;
+  /* margin-bottom: 100px; */
+  position: absolute;
+  width: 100%;
   height: 100%;
-  z-index:-1;
+  z-index: -1;
   overflow:hidden;
   top:0;
   left:0;
@@ -9838,6 +9849,7 @@ textarea.form-control {
   /* border-width: 5px; */
   /* border-color: white; */
   border-radius:50%;
+  /* overflow: inherit; */
   opacity:0.5;
   animation: rise 10s infinite ease-in;
 }
@@ -9961,7 +9973,7 @@ textarea.form-control {
 
 /* would need to be adjusted depending on time */
 .marquee {
-  margin-top: 5%;
+  margin-top: 0;
   height: 100px;
   width: 100%;
 
@@ -9970,6 +9982,7 @@ textarea.form-control {
   background-color: #1285E3;
   border: white solid;
   border-radius: 10px;
+  z-index: -1;
 }
 
 .marquee .marqueeone{
@@ -10056,7 +10069,7 @@ textarea.form-control {
   height: 250px;
   position: relative;
 }
-.wave-2 {
+.wave-1, .wave-2 {
   height: 250px;
   position: relative;
   width: 100%;
@@ -10066,16 +10079,46 @@ textarea.form-control {
   z-index: 2;
   position: absolute;
   width: 100%;
-  translate: 0 -67%;
+  translate: 0% -67%;
   overflow: visible;
 }
 
-.wave-1 {
-  padding: 0;
-  translate: 0 -125%;
-  /* height: 250px; */
+.wave-1 img {
+  z-index: 2;
   position: absolute;
   width: 100%;
+  translate: 0% 65%;
+  overflow: visible;
+}
+
+@media (max-width: 1024px) {
+  .wave-1 img {
+    translate: 0% 110%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wave-1 img {
+    translate: 0% 165%;
+  }
+}
+
+@media (max-width: 425px) {
+  .wave-1 img {
+    translate: 0% 355%;
+  }
+}
+
+@media (max-width: 375px) {
+  .wave-1 img {
+    translate: 0% 405%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wave-1 img {
+    translate: 0% 490%;
+  }
 }
 
 .wave-2 img {
@@ -10436,4 +10479,19 @@ font-size: 28px;
   width: 75px;
   height: 75px;
   transition: 0.3s;
+}
+
+.hero {
+  background-image: url("../images/BG-home.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-position: center; */
+  /* margin-bottom: 100px; */
+  padding: 100px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-image: none;
+  }
 }
