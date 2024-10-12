@@ -8672,6 +8672,12 @@ h1, h2, h3, h4, h5,
     letter-spacing: 3px;
     text-transform: uppercase; }
 
+    @media (max-width: 1199px) {
+      .resume-wrap {
+        height: 350px;
+      }
+    }
+
 .services-1 {
   margin-bottom: 40px;
   padding: 2em;
@@ -10332,4 +10338,12 @@ font-size: 28px;
   .hero {
     background-image: none;
   }
+}
+
+.wave-top img {
+  width: 100%;
+}
+
+.ftco-about {
+  padding-top: 50px;
 }
