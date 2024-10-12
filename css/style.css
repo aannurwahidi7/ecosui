@@ -9616,6 +9616,25 @@ textarea.form-control {
   width: 75px;
   height: 75px;
   display: block;
+  /* position: absolute; */
+}
+
+.col ul {
+  padding: 0;
+}
+.socials li {
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .socials li a {
+    width: 70%;
+    height: 70%;
+  }
+  .socials li a img{
+    width: 70%;
+    height: 70%;
+  }
 }
 
 @media (min-width: 991.99px) {
@@ -9664,7 +9683,7 @@ textarea.form-control {
 @media (min-width: 1359px) {
   .social-links-1 {
     align-items: center;
-    left: -10%;
+    /* left: -10%; */
   }
 }
 
@@ -10342,8 +10361,37 @@ font-size: 28px;
 
 .wave-top img {
   width: 100%;
+  background-size: cover;
 }
 
 .ftco-about {
   padding-top: 50px;
+}
+
+@media (max-width: 731px) {
+  .welcome h1 {
+    font-size: 45px;
+  }
+
+  .welcome h1 img {
+    width: 32px;
+  }
+
+  .contract-address h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 412px) {
+  .welcome h1 {
+    font-size: 30px;
+  }
+
+  .welcome h1 img {
+    width: 20px;
+  }
+
+  .contract-address h1 {
+    font-size: 25px;
+  }
 }
